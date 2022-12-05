@@ -9,12 +9,12 @@ export SQLITE3_LIB_DIR="$SCRIPT_DIR/sqlite3"
 export SQLITE3_INCLUDE_DIR="$SQLITE3_LIB_DIR"
 
 # Download and extract amalgamation
-SQLITE=sqlite-amalgamation-3400000
-curl -O https://sqlite.org/2022/$SQLITE.zip
-unzip -p "$SQLITE.zip" "$SQLITE/sqlite3.c" > "$SQLITE3_LIB_DIR/sqlite3.c"
-unzip -p "$SQLITE.zip" "$SQLITE/sqlite3.h" > "$SQLITE3_LIB_DIR/sqlite3.h"
-unzip -p "$SQLITE.zip" "$SQLITE/sqlite3ext.h" > "$SQLITE3_LIB_DIR/sqlite3ext.h"
-rm -f "$SQLITE.zip"
+#SQLITE=sqlite-amalgamation-3400000
+#curl -O https://sqlite.org/2022/$SQLITE.zip
+#unzip -p "$SQLITE.zip" "$SQLITE/sqlite3.c" > "$SQLITE3_LIB_DIR/sqlite3.c"
+#unzip -p "$SQLITE.zip" "$SQLITE/sqlite3.h" > "$SQLITE3_LIB_DIR/sqlite3.h"
+#unzip -p "$SQLITE.zip" "$SQLITE/sqlite3ext.h" > "$SQLITE3_LIB_DIR/sqlite3ext.h"
+#rm -f "$SQLITE.zip"
 
 # Regenerate bindgen file for sqlite3
 rm -f "$SQLITE3_LIB_DIR/bindgen_bundled_version.rs"
